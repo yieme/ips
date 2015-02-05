@@ -9,6 +9,9 @@
     "dbuild": "npm prune --production; docker build -t yieme/ips .",
     "drun": "export PORT=$(pkg app.port); docker run -p ${PORT}:3000 --rm --name ips yieme/ips; docker ps -a"
   },
+  "keywords": [
+    "ip", "ipv4", "ipv6", "internal", "external", "docker", "address", "local", "machine", "public"
+  ],
   "repository": {
     "type": "git",
     "url": "https://yieme@github.com/yieme/ips.git"
