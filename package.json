@@ -1,6 +1,6 @@
 {
   "name": "ips",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Get local, docker and public IP addresses",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "dbuild": "npm prune --production; docker build -t yieme/ips .",
     "drun": "export PORT=$(pkg app.port); docker run -p ${PORT}:3000 --rm --name ips yieme/ips; docker ps -a"
   },
+  "exec": "bin/ips",
   "keywords": [
     "ip",
     "ipv4",
@@ -19,7 +20,8 @@
     "address",
     "local",
     "machine",
-    "public"
+    "public",
+    "cli"
   ],
   "repository": {
     "type": "git",

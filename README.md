@@ -4,13 +4,26 @@ Get local, docker and public IP addresses
 
 # Install
 
+## Package use
+
 ```js
 npm install ips --save
 ```
 
-# License: MIT
+## CLI
+
+```js
+npm install ips -g
+```
+
 <!-- EXAMPLES:BEGIN -->
 ## Examples
+
+### Command line
+
+```sh
+ips
+```
 
 ### [Basic](examples/basic.js)
 
