@@ -21,7 +21,7 @@ var result = ips()
 console.log(result) // ex: { local: '192.168.10.3', docker: '192.168.10.103' }
 ```
 
-### [With external ip](examples/with-external-ip.js)
+### [With External IP](examples/with-external-ip.js)
 
 ```js
 var ips = require('ips')
