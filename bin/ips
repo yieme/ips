@@ -3,5 +3,5 @@
 
 var ips = require('../index')
 ips(function(e,data) {
-  console.log(data)
+  console.log(JSON.stringify(data))
 })
