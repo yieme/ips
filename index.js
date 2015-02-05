@@ -27,7 +27,7 @@
         var isIPv4 = ipRegex({exact: true}).test(ip)
           , isIPv6 = ipRegex.v6({exact: true}).test(ip)
         if (!err) {
-          if (isIPv4 || isIPv6) ips.outer = ip // only assign if a valid ip address returned
+          if (isIPv4 || isIPv6) ips.public = ip // only assign if a valid ip address returned
         }
         cb(err, ips)
       })

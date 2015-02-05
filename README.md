@@ -4,9 +4,8 @@ Get local, docker and public IP addresses
 
 # Install
 
-
 ```js
-npm install ips
+npm install ips --save
 ```
 
 # License: MIT
