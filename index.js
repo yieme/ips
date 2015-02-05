@@ -5,6 +5,7 @@
 
   var ipify      = require('ipify')
     , internalIp = require('internal-ip')
+    , ipRegex    = require('ip-regex')
 
   function dockerip() {
     var host   = process.env.DOCKER_HOST || ''
@@ -23,7 +24,11 @@
 
     if (cb) {
       ipify(function (err, ip) {
-        if (!err) ips.outer = ip
+        var okIPv4 = ipRegex({exact: true}).test(ip)
+          , okIPv6 = ipRegex.v6({exact: true}).test(ip)
+        if (!err) {
+          if (okIPv4 || okIPv6) ips.outer = ip // only assign if a valid ip address returned
+        }
         cb(err, ips)
       })
     }
