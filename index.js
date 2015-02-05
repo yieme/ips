@@ -3,10 +3,31 @@
 ;(function() {
   'use strict';
 
-  // var convar = require('convar')
+  var ipify      = require('ipify')
+    , internalIp = require('internal-ip')
 
-  var Ips = function() {
+  function dockerip() {
+    var host   = process.env.DOCKER_HOST || ''
+      , domain = host.split('://')[1]
+      , ip     = (domain) ? domain.split(':')[0] : undefined
+    return ip
+  }
 
+  var Ips = function(cb) {
+    var ips = {
+        local: internalIp()
+      }
+      , docker = dockerip()
+
+    if (docker) ips.docker = docker
+
+    if (cb) {
+      ipify(function (err, ip) {
+        if (!err) ips.outer = ip
+        cb(err, ips)
+      })
+    }
+    return ips
   }
 
 

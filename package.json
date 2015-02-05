@@ -26,5 +26,9 @@
     "mocha": "^2.1.0",
     "pkg-cli": "^0.3.0",
     "should": "^4.6.4"
+  },
+  "dependencies": {
+    "internal-ip": "^1.0.0",
+    "ipify": "^1.0.3"
   }
 }
