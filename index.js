@@ -24,10 +24,10 @@
 
     if (cb) {
       ipify(function (err, ip) {
-        var okIPv4 = ipRegex({exact: true}).test(ip)
-          , okIPv6 = ipRegex.v6({exact: true}).test(ip)
+        var isIPv4 = ipRegex({exact: true}).test(ip)
+          , isIPv6 = ipRegex.v6({exact: true}).test(ip)
         if (!err) {
-          if (okIPv4 || okIPv6) ips.outer = ip // only assign if a valid ip address returned
+          if (isIPv4 || isIPv6) ips.outer = ip // only assign if a valid ip address returned
         }
         cb(err, ips)
       })
