@@ -1,6 +1,6 @@
 {
   "name": "ips",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get local, docker and public IP addresses",
   "main": "index.js",
   "scripts": {
