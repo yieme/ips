@@ -1,4 +1,5 @@
-# ips <img src="https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png" align="right" height="120">\index
+# ips <img src="https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png" align="right" height="120">
+
 Get local, docker and public IP addresses
 
 # Install
