@@ -1,6 +1,6 @@
 {
   "name": "ips",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Get local, docker and public IP addresses",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,16 @@
     "drun": "export PORT=$(pkg app.port); docker run -p ${PORT}:3000 --rm --name ips yieme/ips; docker ps -a"
   },
   "keywords": [
-    "ip", "ipv4", "ipv6", "internal", "external", "docker", "address", "local", "machine", "public"
+    "ip",
+    "ipv4",
+    "ipv6",
+    "internal",
+    "external",
+    "docker",
+    "address",
+    "local",
+    "machine",
+    "public"
   ],
   "repository": {
     "type": "git",
