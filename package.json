@@ -9,7 +9,7 @@
     "dbuild": "npm prune --production; docker build -t yieme/ips .",
     "drun": "export PORT=$(pkg app.port); docker run -p ${PORT}:3000 --rm --name ips yieme/ips; docker ps -a"
   },
-  "exec": "bin/ips",
+  "bin": "bin/ips",
   "keywords": [
     "ip",
     "ipv4",
