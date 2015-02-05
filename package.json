@@ -1,0 +1,30 @@
+{
+  "name": "ips",
+  "version": "1.0.0",
+  "description": "Get local, docker and public IP addresses",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint --config .jshintrc . && mocha -R list test/*.js",
+    "run": "node .",
+    "dbuild": "npm prune --production; docker build -t yieme/ips .",
+    "drun": "export PORT=$(pkg app.port); docker run -p ${PORT}:3000 --rm --name ips yieme/ips; docker ps -a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://yieme@github.com/yieme/ips.git"
+  },
+  "author": "yieme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yieme/ips/issues"
+  },
+  "app": {
+    "port": 3000
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0",
+    "mocha": "^2.1.0",
+    "pkg-cli": "^0.3.0",
+    "should": "^4.6.4"
+  }
+}
